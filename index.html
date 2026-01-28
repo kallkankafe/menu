@@ -26,43 +26,22 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .active-nav {
-            color: #f0b429;
-            border-bottom: 2px solid #f0b429;
-        }
-        .product-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        .language-flag {
-            width: 24px;
-            height: 16px;
-            display: inline-block;
-            background-size: cover;
-            border-radius: 2px;
-        }
+        html { scroll-behavior: smooth; }
+        .active-nav { color: #f0b429; border-bottom: 2px solid #f0b429; }
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+        .language-flag { width: 24px; height: 16px; display: inline-block; background-size: cover; border-radius: 2px; }
         .flag-al { background-image: url("https://flagcdn.com/w40/al.png"); }
         .flag-en { background-image: url("https://flagcdn.com/w40/gb.png"); }
         .flag-tr { background-image: url("https://flagcdn.com/w40/tr.png"); }
         .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s;
+            position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+            opacity: 0; transition: opacity 0.3s;
         }
-        .back-to-top.visible {
-            opacity: 1;
-        }
+        .back-to-top.visible { opacity: 1; }
     </style>
 </head>
+
 <body class="min-h-screen bg-primary text-gray-100 font-sans">
     <!-- Header/Navigation -->
     <header class="fixed top-0 left-0 right-0 bg-primary/95 backdrop-blur-sm z-50 border-b border-gray-800">
@@ -80,7 +59,7 @@
                     <a href="#hot-drinks" class="nav-link hover:text-secondary transition-colors">Pije të Nxehta</a>
                     <a href="#nargile" class="nav-link hover:text-secondary transition-colors">Nargile</a>
                     <a href="#snacks" class="nav-link hover:text-secondary transition-colors">Aperative</a>
-                    
+
                     <!-- Language Selector Desktop -->
                     <div class="flex items-center space-x-2 ml-4">
                         <button class="language-btn active" data-lang="sq">
@@ -96,7 +75,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-300 hover:text-secondary" id="mobile-menu-btn">
+                <button class="md:hidden text-gray-300 hover:text-secondary" id="mobile-menu-btn" aria-label="Menu">
                     <i data-feather="menu" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -108,7 +87,7 @@
                     <a href="#hot-drinks" class="nav-link hover:text-secondary py-2">Pije të Nxehta</a>
                     <a href="#nargile" class="nav-link hover:text-secondary py-2">Nargile</a>
                     <a href="#snacks" class="nav-link hover:text-secondary py-2">Aperative</a>
-                    
+
                     <!-- Language Selector Mobile -->
                     <div class="flex items-center space-x-4 pt-4 border-t border-gray-800">
                         <span class="text-sm text-gray-400">Gjuha:</span>
@@ -155,33 +134,25 @@
         <!-- Cold Drinks -->
         <section id="cold-drinks" class="scroll-mt-20">
             <h2 class="text-3xl font-bold mb-6 text-secondary" data-i18n="sections.coldDrinks">Pije të Ftohta</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Product cards will be generated here -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
         </section>
 
         <!-- Hot Drinks -->
         <section id="hot-drinks" class="scroll-mt-20">
             <h2 class="text-3xl font-bold mb-6 text-secondary" data-i18n="sections.hotDrinks">Pije të Nxehta</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Product cards will be generated here -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
         </section>
 
         <!-- Nargile -->
         <section id="nargile" class="scroll-mt-20">
             <h2 class="text-3xl font-bold mb-6 text-secondary" data-i18n="sections.nargile">Nargile</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Product cards will be generated here -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
         </section>
 
         <!-- Snacks -->
         <section id="snacks" class="scroll-mt-20">
             <h2 class="text-3xl font-bold mb-6 text-secondary" data-i18n="sections.snacks">Aperative</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Product cards will be generated here -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
         </section>
     </main>
 
@@ -212,9 +183,18 @@
                     </ul>
                 </div>
 
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary" data-i18n="footer.aboutTitle">Rreth Nesh</h3>
+                    <p class="text-gray-300" data-i18n="footer.about">
+                        Përvojë premium nargile në zemër të Tetovës. Bashkohuni me ne për një mbrëmje relaksuese me shije të shkëlqyera dhe ambient të rehatshëm.
+                    </p>
+                </div>
+            </div>
+
             <div class="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm">
                 <p>&copy; 2025 Kallkan Cafe. Design Yasin Taha Atbaş.</p>
-                
+
                 <!-- Language Selector Footer -->
                 <div class="flex items-center space-x-4 mt-4 md:mt-0">
                     <span data-i18n="footer.language">Gjuha:</span>
@@ -238,7 +218,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top bg-secondary text-primary rounded-full p-3 shadow-lg hover:bg-yellow-500 transition-colors">
+    <button id="back-to-top" class="back-to-top bg-secondary text-primary rounded-full p-3 shadow-lg hover:bg-yellow-500 transition-colors" aria-label="Back to top">
         <i data-feather="arrow-up" class="w-6 h-6"></i>
     </button>
 
@@ -246,24 +226,17 @@
         // Initialize Feather icons
         feather.replace();
 
-        // Translations
+        // Translations + ADDED: rasporn (3 languages)
         const translations = {
             sq: {
-                hero: {
-                    title: "Kallkan Cafe",
-                    tagline: "Përvojë Premium Nargile në Zemër të Tetovës"
-                },
-                sections: {
-                    coldDrinks: "Pije të Ftohta",
-                    hotDrinks: "Pije të Nxehta",
-                    nargile: "Nargile",
-                    snacks: "Aperative"
-                },
+                hero: { title: "Kallkan Cafe", tagline: "Përvojë Premium Nargile në Zemër të Tetovës" },
+                sections: { coldDrinks: "Pije të Ftohta", hotDrinks: "Pije të Nxehta", nargile: "Nargile", snacks: "Aperative" },
                 footer: {
                     contact: "Kontakt",
                     address: "Rruga Iliria, Tetovë, Maqedoni",
                     phone: "+389 76 228 755",
                     hours: "Orari",
+                    aboutTitle: "Rreth Nesh",
                     about: "Përvojë premium nargile në zemër të Tetovës. Bashkohuni me ne për një mbrëmje relaksuese me shije të shkëlqyera dhe ambient të rehatshëm.",
                     language: "Gjuha"
                 },
@@ -288,85 +261,43 @@
                     },
                     hotDrinks: {
                         espresso: "Espresso",
-                        espressolarge: "Espresso e Madhe",
+                        espressoLarge: "Espresso e Madhe",
                         macchiato: "Macchiato",
-                        macchiatolarge: "Macchiato e Madhe",
+                        macchiatoLarge: "Macchiato e Madhe",
                         cappuccino: "Cappuccino",
-                        cappuccinolarge: "Cappuccino e Madhe",
+                        cappuccinoLarge: "Cappuccino e Madhe",
                         sahlep: "Sahlep",
                         hotchocolate: "Çokollate e Nxehte",
                         herbaltea: "Çaj Filter",
                         tea: "Çaj"
                     },
                     nargile: {
-                        love66: {
-                            name: "Love66",
-                            description: "Përzierje frutash"
-                        },
-                        icebomb: {
-                            name: "Ice Bomb",
-                            description: "mentol"
-                        },
-                        leckerlecker: {
-                            name: "Lecker Lecker",
-                            description: "Karamel"
-                        },
-                        watermelonpunch: {
-                            name: "Watermelon Punch",
-                            description: "Shalqir"
-                        },
-                        wanndan: {
-                            name: "Wann Dan",
-                            description: "mole e gjelbert"
-                        },
-                        leepunch: {
-                            name: "Lee Punch",
-                            description: "limon"
-                        },
-                        missjoosy: {
-                            name: "Miss Joosy",
-                            description: "Fruta malın"
-                        },
-                        grpemnt: {
-                            name: "Grape Mnt",
-                            description: "Rrush mint"
-                        },
-                        ricopunch: {
-                            name: "Rico Punch",
-                            description: "fruta"
-                        },
-                        lionpunch: {
-                            name: "Lion Punch",
-                            description: "Fruta Ekzotike"
-                        },
-                        lucifero: {
-                            name: "Lucifero",
-                            description: "Dredhes Molle"
-                        }
+                        love66: { name: "Love66", description: "Përzierje frutash" },
+                        icebomb: { name: "Ice Bomb", description: "mentol" },
+                        leckerlecker: { name: "Lecker Lecker", description: "Karamel" },
+                        watermelonpunch: { name: "Watermelon Punch", description: "Shalqir" },
+                        wanndan: { name: "Wann Dan", description: "mole e gjelbert" },
+                        leepunch: { name: "Lee Punch", description: "limon" },
+                        missjoosy: { name: "Miss Joosy", description: "Fruta malın" },
+                        grpemnt: { name: "Grape Mnt", description: "Rrush mint" },
+                        rasporn: { name: "Rasporn", description: "Fruta të kuqe" }
                     },
                     snacks: {
                         doritos: "Doritos",
                         fruitPlate: "Pjatë Frutash",
-                        mixedNuts: " Arra ındıje badena lejthıa"
+                        mixedNuts: "Arra ındıje badena lejthıa"
                     }
                 }
             },
             en: {
-                hero: {
-                    title: "Kallkan Cafe",
-                    tagline: "Premium Hookah Experience in the Heart of Tetovo"
-                },
-                sections: {
-                    coldDrinks: "Cold Drinks",
-                    hotDrinks: "Hot Drinks",
-                    nargile: "Nargile",
-                    snacks: "Snacks"
-                },
+                hero: { title: "Kallkan Cafe", tagline: "Premium Hookah Experience in the Heart of Tetovo" },
+                sections: { coldDrinks: "Cold Drinks", hotDrinks: "Hot Drinks", nargile: "Nargile", snacks: "Snacks" },
                 footer: {
                     contact: "Contact",
                     address: "Iliria Street, Tetovo, Macedonia",
-                    phone: "+389 70 123 456",
+                    phone: "+389 76 228 755",
                     hours: "Hours",
+                    aboutTitle: "About",
                     about: "Premium hookah experience in the heart of Tetovo. Join us for a relaxing evening with great flavors and comfortable ambiance.",
                     language: "Language"
                 },
@@ -391,85 +322,39 @@
                     },
                     hotDrinks: {
                         espresso: "Espresso",
-                        espressolarge: "Large Espresso",
+                        espressoLarge: "Large Espresso",
                         macchiato: "Macchiato",
-                        macchiatolarge: "Large Macchiato",
+                        macchiatoLarge: "Large Macchiato",
                         cappuccino: "Cappuccino",
-                        cappuccinolarge: "Large Cappuccino",
+                        cappuccinoLarge: "Large Cappuccino",
                         sahlep: "Sahlep",
                         hotchocolate: "Hot Chocolate",
                         herbaltea: "Herbal Tea",
                         tea: "Tea"
                     },
                     nargile: {
-                        love66: {
-                            name: "Love66",
-                            description: "Sweet fruity mix"
-                        },
-                        icebomb: {
-                            name: "Ice Bomb",
-                            description: "Cool menthol blast"
-                        },
-                        leckerlecker: {
-                            name: "Lecker Lecker",
-                            description: "Delicious tropical"
-                        },
-                        watermelonpunch: {
-                            name: "Watermelon Punch",
-                            description: "Juicy watermelon"
-                        },
-                        wanndan: {
-                            name: "Wann Dan",
-                            description: "Exotic mix"
-                        },
-                        leepunch: {
-                            name: "Lee Punch",
-                            description: "Lemon punch"
-                        },
-                        missjoosy: {
-                            name: "Miss Joosy",
-                            description: "Juicy blackberry"
-                        },
-                        Grpemnt: {
-                            name: "Grpe Mnt",
-                            description: "Grape and mint"
-                        },
-                        Ricopunch: {
-                            name: "Rico Punch",
-                            description: "Rich fruit punch"
-                        },
-                        Lionpunch: {
-                            name: "Lion Punch",
-                            description: "Strong spicy"
-                        },
-                        Lucifero: {
-                            name: "Lucifero",
-                            description: "Intense fiery"
-                        }
+                        love66: { name: "Love66", description: "Sweet fruity mix" },
+                        icebomb: { name: "Ice Bomb", description: "Cool menthol blast" },
+                        leckerlecker: { name: "Lecker Lecker", description: "Delicious tropical" },
+                        watermelonpunch: { name: "Watermelon Punch", description: "Juicy watermelon" },
+                        wanndan: { name: "Wann Dan", description: "Exotic mix" },
+                        leepunch: { name: "Lee Punch", description: "Lemon punch" },
+                        missjoosy: { name: "Miss Joosy", description: "Juicy blackberry" },
+                        grpemnt: { name: "Grape Mnt", description: "Grape and mint" },
+                        rasporn: { name: "Rasporn", description: "Red fruits" }
                     },
-                    snacks: {
-                        doritos: "Doritos",
-                        fruitPlate: "Fruit Plate",
-                        mixedNuts: "Nuts"
-                    }
+                    snacks: { doritos: "Doritos", fruitPlate: "Fruit Plate", mixedNuts: "Nuts" }
                 }
             },
             tr: {
-                hero: {
-                    title: "Kallkan Cafe",
-                    tagline: "Tetovo'nun Kalbinde Premium Nargile Deneyimi"
-                },
-                sections: {
-                    coldDrinks: "Soğuk İçecekler",
-                    hotDrinks: "Sıcak İçecekler",
-                    nargile: "Nargile",
-                    snacks: "Atıştırmalıklar"
-                },
+                hero: { title: "Kallkan Cafe", tagline: "Tetovo'nun Kalbinde Premium Nargile Deneyimi" },
+                sections: { coldDrinks: "Soğuk İçecekler", hotDrinks: "Sıcak İçecekler", nargile: "Nargile", snacks: "Atıştırmalıklar" },
                 footer: {
                     contact: "İletişim",
                     address: "Iliria Caddesi, Tetovo, Makedonya",
                     phone: "+389 76 228 755",
                     hours: "Saatler",
+                    aboutTitle: "Hakkımızda",
                     about: "Tetovo'nun kalbinde premium nargile deneyimi. Harika tatlar ve rahat ortamla rahatlatıcı bir akşam için bize katılın.",
                     language: "Dil"
                 },
@@ -505,65 +390,26 @@
                         tea: "Normal Çay"
                     },
                     nargile: {
-                        Love66: {
-                            name: "Love66",
-                            description: "Tatlı meyveli karışım"
-                        },
-                        Icebomb: {
-                            name: "Ice Bomb",
-                            description: "Serin mentol patlaması"
-                        },
-                        Leckerlecker: {
-                            name: "Lecker Lecker",
-                            description: "Lezzetli tropikal"
-                        },
-                        Watermelonpunch: {
-                            name: "Watermelon Punch",
-                            description: "Sulu karpuz"
-                        },
-                        Wanndan: {
-                            name: "Wann Dan",
-                            description: "Egzotik karışım"
-                        },
-                        Leepunch: {
-                            name: "Lee Punch",
-                            description: "Limon punch"
-                        },
-                        Missjoosy: {
-                            name: "Miss Joosy",
-                            description: "Sulu böğürtlen"
-                        },
-                        Grpemnt: {
-                            name: "Grpe Mnt",
-                            description: "Üzüm ve nane"
-                        },
-                        Ricopunch: {
-                            name: "Rico Punch",
-                            description: "Zengin meyve punch"
-                        },
-                        Lionpunch: {
-                            name: "Lion Punch",
-                            description: "Güçlü baharatlı"
-                        },
-                        Lucifero: {
-                            name: "Luciero",
-                            description: "Yoğun ateşli"
-                        }
+                        love66: { name: "Love66", description: "Tatlı meyveli karışım" },
+                        icebomb: { name: "Ice Bomb", description: "Serin mentol patlaması" },
+                        leckerlecker: { name: "Lecker Lecker", description: "Lezzetli tropikal" },
+                        watermelonpunch: { name: "Watermelon Punch", description: "Sulu karpuz" },
+                        wanndan: { name: "Wann Dan", description: "Egzotik karışım" },
+                        leepunch: { name: "Lee Punch", description: "Limon punch" },
+                        missjoosy: { name: "Miss Joosy", description: "Sulu böğürtlen" },
+                        grpemnt: { name: "Grape Mnt", description: "Üzüm ve nane" },
+                        rasporn: { name: "Rasporn", description: "Kırmızı meyveler" }
                     },
-                    snacks: {
-                        doritos: "Doritos",
-                        fruitPlate: "Meyve Tabağı",
-                        mixedNuts: "Kuruyemiş"
-                    }
+                    snacks: { doritos: "Doritos", fruitPlate: "Meyve Tabağı", mixedNuts: "Kuruyemiş" }
                 }
             }
         };
 
-        // Products Data
+        // Products Data + ADDED: rasporn with your link
         const productsData = {
             coldDrinks: [
-                { key: "Coca Cola", price: 80, image: "https://imgur.com/kGcmdDU.png" },
-                { key: "Cola Zero", price: 80, image: "https://i.imgur.com/e6DNeag.png" },
+                { key: "cola", price: 80, image: "https://imgur.com/kGcmdDU.png" },
+                { key: "colaZero", price: 80, image: "https://i.imgur.com/e6DNeag.png" },
                 { key: "fantaOrange", price: 80, image: "https://i.imgur.com/JssfkXm.png" },
                 { key: "fantaExotic", price: 80, image: "https://i.imgur.com/7MqsZp0.png" },
                 { key: "schweppesBitterLemon", price: 80, image: "https://i.imgur.com/MMuxoUm.png" },
@@ -581,28 +427,28 @@
             ],
             hotDrinks: [
                 { key: "espresso", price: 50, image: "https://www.seriouseats.com/thmb/Yjvu2NwulrGqm6ahC_RjbDMWKzM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sea-espresso-cups-sweese-handles-irvin-lin-01-9be5464197a24596bd2d3be509910c49.jpeg" },
-                { key: "espressolarge", price: 80, image: "https://i.imgur.com/C9gNePp.jpeg" },
+                { key: "espressoLarge", price: 80, image: "https://i.imgur.com/C9gNePp.jpeg" },
                 { key: "macchiato", price: 50, image: "https://i.imgur.com/MrGZSnU.jpeg" },
-                { key: "macchiatolarge", price: 80, image: "http://whitehorsecoffee.com.au/cdn/shop/articles/The-double-Mac-7.jpg?v=1680243616" },
+                { key: "macchiatoLarge", price: 80, image: "http://whitehorsecoffee.com.au/cdn/shop/articles/The-double-Mac-7.jpg?v=1680243616" },
                 { key: "cappuccino", price: 60, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Cappuccino_in_original.jpg/1200px-Cappuccino_in_original.jpg" },
-                { key: "cappuccinolarge", price: 90, image: "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/bb_how_to_Capp_tada.jpg" },
+                { key: "cappuccinoLarge", price: 90, image: "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/bb_how_to_Capp_tada.jpg" },
                 { key: "sahlep", price: 70, image: "https://ozlemsturkishtable.com/files/2014/03/IMG_2156.jpg" },
                 { key: "hotchocolate", price: 100, image: "https://i.imgur.com/zV53YHd.jpeg" },
                 { key: "herbaltea", price: 60, image: "https://static.toiimg.com/thumb/69385334.jpg?imgsize=191579&photoid=69385334&width=375&height=210&resizemode=75" },
                 { key: "tea", price: 40, image: "https://i.imgur.com/tInhGgE.jpeg" }
-             ],
-             nargile: [
-                { key: "lovE66", price: 400, image: "https://i.imgur.com/BOQDJbh.png" },
+            ],
+            nargile: [
+                { key: "love66", price: 400, image: "https://i.imgur.com/BOQDJbh.png" },
                 { key: "icebomb", price: 400, image: "https://i.imgur.com/b4dL61V.png" },
-                { key: "leckerLecker", price: 400, image: "https://i.imgur.com/v59JtJ7.png" },
-                { key: "watermeLonpunch", price: 400, image: "https://i.imgur.com/zm6bt8J.png" },
-                { key: "wannDan", price: 400, image: "https://i.imgur.com/gmWge8v.png" },
-                { key: "leePunch", price: 400, image: "https://i.imgur.com/IPg9kDk.png" },
-                { key: "missJoosy", price: 400, image: "https://i.imgur.com/JvtZiUY.png" },
-                { key: "grpeMnt", price: 400, image: "https://i.imgur.com/AkRxRAT.png" },
-                { key: "ricoPunch", price: 400, image: "https://i.imgur.com/SDq7lNz.png" },
-                { key: "lionPunch", price: 400, image: "https://i.imgur.com/IN3mIpV.png" },
-                { key: "luciFero", price: 400, image: "https://i.imgur.com/eqnb7yp.png" }
+                { key: "leckerlecker", price: 400, image: "https://i.imgur.com/v59JtJ7.png" },
+                { key: "watermelonpunch", price: 400, image: "https://i.imgur.com/zm6bt8J.png" },
+                { key: "wanndan", price: 400, image: "https://i.imgur.com/gmWge8v.png" },
+                { key: "leepunch", price: 400, image: "https://i.imgur.com/IPg9kDk.png" },
+                { key: "missjoosy", price: 400, image: "https://i.imgur.com/JvtZiUY.png" },
+                { key: "grpemnt", price: 400, image: "https://i.imgur.com/AkRxRAT.png" },
+
+                /* ✅ RASPOR N (your link) */
+                { key: "rasporn", price: 400, image: "https://imgur.com/aGA68p6" }
             ],
             snacks: [
                 { key: "doritos", price: 150, image: "https://i.imgur.com/pDjsDP9.jpeg" },
@@ -620,89 +466,99 @@
 
         let currentLang = "sq";
 
-    // Generate Product Cards – %100 ÇALIŞAN SON HAL
-// Generate Product Cards – HEM NARGİLE HEM DİĞER KATEGORİLER İÇİN %100 ÇALIŞAN SON HAL
-function generateProductCards() {
-    const sections = {
-        coldDrinks: document.querySelector("#cold-drinks .grid"),
-        hotDrinks:  document.querySelector("#hot-drinks .grid"),
-        nargile:    document.querySelector("#nargile .grid"),
-        snacks:     document.querySelector("#snacks .grid")
-    };
-
-    Object.keys(sections).forEach(category => {
-        const container = sections[category];
-        if (!container) return;
-        container.innerHTML = "";
-
-        productsData[category].forEach(product => {
-            let name = product.key;
-            let description = "";
-
-            const catTrans = translations[currentLang].products[category];
-
-            if (catTrans) {
-                // 1) Nargile: obje içinde {name, description} var → case-insensitive eşleştir
-                if (category === "nargile") {
-                    const foundKey = Object.keys(catTrans).find(
-                        k => k.toLowerCase() === product.key.toLowerCase()
-                    );
-                    if (foundKey && catTrans[foundKey]) {
-                        name = catTrans[foundKey].name || product.key;
-                        description = catTrans[foundKey].description || "";
+        // ✅ Makes imgur.com/<id> work inside <img> by converting to i.imgur.com/<id>.<ext>
+        function normalizeImageUrl(url) {
+            try {
+                const u = new URL(url);
+                // imgur.com/<id> (no extension) -> i.imgur.com/<id>.jpg
+                if (u.hostname === "imgur.com" && !u.pathname.startsWith("/a/")) {
+                    const id = u.pathname.replace("/", "");
+                    if (id && !id.includes(".")) {
+                        return `https://i.imgur.com/${id}.jpg`;
                     }
                 }
-                // 2) Diğer kategoriler (coldDrinks, hotDrinks, snacks): direkt string
-                else {
-                    const exactKey = Object.keys(catTrans).find(
-                        k => k.toLowerCase() === product.key.toLowerCase()
-                    );
-                    if (exactKey && catTrans[exactKey]) {
-                        name = catTrans[exactKey]; // direkt string
+            } catch (_) {}
+            return url;
+        }
+
+        // Generate Product Cards
+        function generateProductCards() {
+            const sections = {
+                coldDrinks: document.querySelector("#cold-drinks .grid"),
+                hotDrinks:  document.querySelector("#hot-drinks .grid"),
+                nargile:    document.querySelector("#nargile .grid"),
+                snacks:     document.querySelector("#snacks .grid")
+            };
+
+            Object.keys(sections).forEach(category => {
+                const container = sections[category];
+                if (!container) return;
+                container.innerHTML = "";
+
+                (productsData[category] || []).forEach(product => {
+                    let name = product.key;
+                    let description = "";
+
+                    const catTrans = translations[currentLang]?.products?.[category];
+
+                    if (catTrans) {
+                        if (category === "nargile") {
+                            const foundKey = Object.keys(catTrans).find(
+                                k => k.toLowerCase() === String(product.key).toLowerCase()
+                            );
+                            if (foundKey && catTrans[foundKey]) {
+                                name = catTrans[foundKey].name || product.key;
+                                description = catTrans[foundKey].description || "";
+                            }
+                        } else {
+                            const exactKey = Object.keys(catTrans).find(
+                                k => k.toLowerCase() === String(product.key).toLowerCase()
+                            );
+                            if (exactKey && catTrans[exactKey]) {
+                                name = catTrans[exactKey];
+                            }
+                        }
                     }
-                }
-            }
 
-            const card = `
-                <div class="product-card bg-accent rounded-lg overflow-hidden shadow-md">
-                    <img src="${product.image}" alt="${name}" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">${name}</h3>
-                        ${description ? `<p class="text-sm text-gray-400 mb-2">${description}</p>` : ""}
-                        <p class="text-secondary font-bold">${product.price} MKD</p>
-                    </div>
-                </div>
-            `;
+                    const imgSrc = normalizeImageUrl(product.image);
 
-            container.innerHTML += card;
-        });
-    });
-}
+                    const card = `
+                        <div class="product-card bg-accent rounded-lg overflow-hidden shadow-md">
+                            <img
+                                src="${imgSrc}"
+                                alt="${name}"
+                                class="w-full h-48 object-cover"
+                                onerror="if(this.src.endsWith('.jpg')){this.src=this.src.replace('.jpg','.png');}else if(this.src.endsWith('.png')){this.src=this.src.replace('.png','.jpeg');}"
+                            >
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">${name}</h3>
+                                ${description ? `<p class="text-sm text-gray-400 mb-2">${description}</p>` : ""}
+                                <p class="text-secondary font-bold">${product.price} MKD</p>
+                            </div>
+                        </div>
+                    `;
+
+                    container.innerHTML += card;
+                });
+            });
+        }
 
         // Update all text content based on current language
         function updateLanguage() {
-            // Update all elements with data-i18n attribute
             document.querySelectorAll("[data-i18n]").forEach(element => {
                 const key = element.getAttribute("data-i18n");
                 const keys = key.split(".");
                 let value = translations[currentLang];
-                
+
                 for (const k of keys) {
-                    if (value && value[k]) {
-                        value = value[k];
-                    } else {
-                        value = key; // Fallback to key if translation not found
-                        break;
-                    }
+                    if (value && Object.prototype.hasOwnProperty.call(value, k)) value = value[k];
+                    else { value = key; break; }
                 }
-                
-                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-                    element.placeholder = value;
-                } else {
-                    element.textContent = value;
-                }
+
+                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") element.placeholder = value;
+                else element.textContent = value;
             });
-            
+
             // Update active language button
             languageBtns.forEach(btn => {
                 if (btn.dataset.lang === currentLang) {
@@ -713,8 +569,8 @@ function generateProductCards() {
                     btn.classList.add("text-gray-400");
                 }
             });
-            
-            // Regenerate product cards to update category names
+
+            // Regenerate product cards
             generateProductCards();
         }
 
@@ -722,18 +578,16 @@ function generateProductCards() {
         function updateActiveNav() {
             const sections = document.querySelectorAll("section[id]");
             const scrollPos = window.scrollY + 100;
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 const sectionId = section.getAttribute("id");
-                
+
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                     navLinks.forEach(link => {
                         link.classList.remove("active-nav");
-                        if (link.getAttribute("href") === `#${sectionId}`) {
-                            link.classList.add("active-nav");
-                        }
+                        if (link.getAttribute("href") === `#${sectionId}`) link.classList.add("active-nav");
                     });
                 }
             });
@@ -741,29 +595,29 @@ function generateProductCards() {
 
         // Show/hide back to top button
         function toggleBackToTop() {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add("visible");
-            } else {
-                backToTopBtn.classList.remove("visible");
-            }
+            if (window.scrollY > 300) backToTopBtn.classList.add("visible");
+            else backToTopBtn.classList.remove("visible");
         }
 
         // Event Listeners
         mobileMenuBtn.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
             const icon = mobileMenuBtn.querySelector("i");
-            if (mobileMenu.classList.contains("hidden")) {
-                feather.replace(icon, "menu");
-            } else {
-                feather.replace(icon, "x");
-            }
+            if (!icon) return;
+
+            if (mobileMenu.classList.contains("hidden")) icon.setAttribute("data-feather", "menu");
+            else icon.setAttribute("data-feather", "x");
+
+            feather.replace(); // re-render icons safely
         });
 
         // Close mobile menu when clicking a link
         document.querySelectorAll("#mobile-menu a").forEach(link => {
             link.addEventListener("click", () => {
                 mobileMenu.classList.add("hidden");
-                feather.replace(mobileMenuBtn.querySelector("i"), "menu");
+                const icon = mobileMenuBtn.querySelector("i");
+                if (icon) icon.setAttribute("data-feather", "menu");
+                feather.replace();
             });
         });
 
@@ -782,23 +636,17 @@ function generateProductCards() {
                 e.preventDefault();
                 const targetId = this.getAttribute("href");
                 if (targetId === "#") return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: "smooth"
-                    });
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: "smooth" });
                 }
             });
         });
 
         // Back to top
         backToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
         // Scroll events
@@ -817,7 +665,9 @@ function generateProductCards() {
         document.addEventListener("click", (e) => {
             if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
                 mobileMenu.classList.add("hidden");
-                feather.replace(mobileMenuBtn.querySelector("i"), "menu");
+                const icon = mobileMenuBtn.querySelector("i");
+                if (icon) icon.setAttribute("data-feather", "menu");
+                feather.replace();
             }
         });
     </script>
